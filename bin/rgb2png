@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rgb2png() {
+	FILE=$1
+	ffmpeg -vcodec rawvideo -f rawvideo -pix_fmt rgb565 -s 640x480 -i $FILE -f image2 -vcodec png $FILE.png
+}
+
+for f in capture-[0-9][0-9][0-9][0-9][0-9]
+do
+	rgb2png $f
+done

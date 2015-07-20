@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# $1, $2: kernel dir
+# $3    : file path
+vimdiff $1/$3 $2/$3

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+printDependency() {
+    FILES=`arm-linux-androideabi-readelf -d $1 | grep "NEEDED" | cut -d\[ -f2 | cut -d\] -f1`
+
+    LIBS=
+    for f in $FILES; do
+        LIBS="$LIBS $f"
+    done
+    echo $LIBS
+}
+
+for f in $*; do
+    echo -n "$f: "
+    printDependency $f
+done
+
