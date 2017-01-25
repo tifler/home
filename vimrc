@@ -1,4 +1,5 @@
 colorscheme desert  "  vi 색상 테마 설정
+"colorscheme PerfectDark
 set nocompatible    " 오리지날 VI와 호환하지 않음
 set autoindent      " 자동 들여쓰기
 set cindent         " C 프로그래밍용 자동 들여쓰기
@@ -28,6 +29,12 @@ set comments=sl:/*,mb:\ *,elx:\ */
 set cc=81	"80 컬럼에 경계 표시
 syntax on
 
+
+" for linuxsty.vim
+let g:linuxsty_patterns = [ "/kernel/", "/kernel-dt/", "/linux/", "/home2/tifler/work/kernel/", "/home2/tifler/work/prj-odysseus/kernel/", "/home2/tifler/work/prj-odysseus/kernel-mainline/", "/home2/tifler/work/prj-odysseus/kernel-modem/", "/home2/tifler/work/github/kernel-sample-codes/" ]
+nnoremap <silent> <leader>a :LinuxCodingStyle<cr>
+
+
 if has("autocmd")
     filetype plugin indent on
 endif
@@ -38,17 +45,17 @@ autocmd BufReadPost *
     \ endif
 
 "cscope
-set csprg=/usr/bin/cscope
 
-set csto=0
-set cst
-set nocsverb
+"set csprg=/usr/bin/cscope
+
+"set csto=0
+"set cst
+"set nocsverb
 
 if filereadable("./cscope.out")
     cs add cscope.out
 endif
-set csverb
-
+"set csverb
 
 " 자동으로 folding 정보를 저장한다.
 "au BufWinLeave * mkview
@@ -58,18 +65,10 @@ set csverb
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags,../../../../../../tags,../../../../../../../tags,../../../../../../../../tags,../../../../../../../../../tags
 nmap <F1> :Tlist<CR>
 nmap <F2> :NERDTree<CR>
+nmap <F3> :GtagsCursor<CR>
+nmap <F4> :Gtags -r <CR><CR>
+nmap <F5> :Gtags -f <CR><CR>
+nmap <F10> :bp<CR>
 
-"map <C-n> :cn<CR>
-"map <C-p> :cp<CR>
-"map <C-]> :Gtags<CR><CR>
-"map <C-\> :Gtags -r<CR><CR>
-
-map <C-g> :Gtags 
-map <C-h> :Gtags -f <CR><CR>
-map <C-\> :Gtags -r <CR><CR>
-map <C-j> :GtagsCursor <CR>
 map <C-n> :cn <CR>
 map <C-p> :cp <CR>
-
-"nmap <C-\><C-]> :GtagsCursor<CR>
-
