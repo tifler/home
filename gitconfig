@@ -1,0 +1,22 @@
+[user]
+	email = ydlee@anapass.com
+	name = Youngdo, Lee
+[color]
+    ui = auto
+[merge]
+	tool = vimdiff
+[core]
+	editor = vim
+[push]
+	default = matching
+[i18n]
+	commitencoding = utf-8
+    logoutputencoding = utf-8
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    hist = log --graph --full-history --all --pretty=format:'%Cred%h%Creset %ad %s %C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --date=short
+    stat = shortlog -sn --since=36.months
+    logs = log --stat
+[format]
+	signoff = true
