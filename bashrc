@@ -99,11 +99,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export PS1="\e[0;33m\][\h \$PWD]\e[m\]\\n\t \$ "
-export USE_CCACHE=1
-export CCACHE_DIR=/data/.ccache
+#export USE_CCACHE=1
+#export CCACHE_DIR=/data/.ccache
 
-export ARCH=arm
-export TARGET_PRODUCT=anapassdiamond
+#export ARCH=arm
+#export TARGET_PRODUCT=anapassdiamond
 
 JAVA_BIN_PATH=/data/java/64/jdk1.6.0_45/bin
 XTOOL_SOURCERY_PATH=/data/CodeSourcery/arm-2010q1/bin
@@ -117,5 +117,5 @@ export PATH=$PATH:$JAVA_BIN_PATH:$XTOOL_SOURCERY_PATH:$XTOOL_LINARO_PATH:$XTOOL_
 #export CROSS_COMPILE=arm-eabi-
 #export CROSS_COMPILE=arm-linux-androideabi-
 
-export BASE_ROOTFS_DIR=/home2/tifler/work/ramdisk/vgroup_rootfs
-export CROSS_COMPILE=$BASE_ROOTFS_DIR/output/host/opt/ext-toolchain/bin/arm-none-linux-gnueabi-
+#export BASE_ROOTFS_DIR=/home2/tifler/work/ramdisk/vgroup_rootfs
+#export CROSS_COMPILE=$BASE_ROOTFS_DIR/output/host/opt/ext-toolchain/bin/arm-none-linux-gnueabi-
