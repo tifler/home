@@ -98,7 +98,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PS1="\e[0;33m\][\h \$PWD]\e[m\]\\n\t \$ "
+export PS1="\e[0;33m[\h \$PWD]\e[m\\n\t \$ "
 #export USE_CCACHE=1
 #export CCACHE_DIR=/data/.ccache
 
