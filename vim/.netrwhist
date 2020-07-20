@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/data/tizen/tifler/GBS_ROOT-3.0-Common/local/repos/tizen3.0_common/armv7l/logs/success/pcre-8.31-0'
-let g:netrw_dirhist_2='/home2/tifler/work/test-platform/skel'
-let g:netrw_dirhist_3='/home2/tifler/work/bootldr/lkboot'
-let g:netrw_dirhist_4='/home2/tifler/work/camera/gdm-camera-android'
