@@ -6,6 +6,7 @@
 
 "==============================================================================
 " vim-plug
+" After adding plugin, just do :PlugInstall
 call plug#begin('~/.vim/plugged')
 	Plug 'majutsushi/tagbar'
 	Plug 'vivien/vim-linux-coding-style'
@@ -25,6 +26,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'kablamo/vim-git-log'
 	Plug 'udalov/kotlin-vim'
 	Plug 'tpope/vim-commentary'
+	Plug 'KarimElghamry/vim-auto-comment'
+	"Plug 'vim-airline/vim-airline'
+	"Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "==============================================================================
@@ -94,7 +98,9 @@ au BufEnter /* call LoadCscope()
 
 "==============================================================================
 " lightline.vim
-set laststatus=2
+set laststatus=2 " 상태바 표시를 항상한다
+"set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
+let g:lightline = { 'colorscheme': 'wombat', }
 
 "==============================================================================
 " git grep integration
@@ -115,7 +121,7 @@ command -nargs=? G call GitGrep(<f-args>)
 "set tag=./tags;/
 set tags=./tags,tags;./.tags,.tags;./.vscode-ctags,.vscode-ctags;
 
-let g:linuxsty_patterns = [ "/kernel/", "/u-boot/", "/bl1/" ]
+let g:linuxsty_patterns = [ "/kernel/", "/u-boot/", "/bl1/", "/driver/" ]
 nnoremap <silent> <leader>a :LinuxCodingStyle<cr>
 
 
